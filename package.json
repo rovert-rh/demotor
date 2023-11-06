@@ -45,6 +45,9 @@
       "react-app/jest"
     ]
   },
+  ".eslintrc": {
+    "extends": "react-app"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
