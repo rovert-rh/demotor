@@ -33,7 +33,7 @@ const Shipping = () => {
           alert.error(errores[i]);
         }
       }
-    }, [dispatch, errores, alert, isUpdated]);
+    }, [navigate]);
 
     const submitHandler = (e) => {
         e.preventDefault();
