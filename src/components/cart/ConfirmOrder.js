@@ -37,7 +37,7 @@ const ConfirmOrder = () => {
         alert.error(error);
       }
     }
-  }, [alert, navigate]);
+  },  [dispatch, errores, isUpdated]);
   
 
   const handlerSubmit = () => {
