@@ -45,7 +45,7 @@ const Payment = (props) => {
   const elements = useElements();
 
   const { user } = useSelector((state) => state.security);
-  const { stripeApiKey, clientSecret, order } = useSelector(
+  const { clientSecret, order } = useSelector(
     (state) => state.order
   );
 

@@ -2,9 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { useAlert } from "react-alert";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductPagination, getProducts } from "../actions/productsAction";
-import Loader from "./layout/Loader";
 import MetaData from "./layout/MetaData";
-import Product from "./product/Product";
 import Products from "./products/Products";
 import Pagination from "react-js-pagination";
 import {
@@ -25,14 +23,12 @@ const Home = () => {
 
   const { categories } = useSelector((state) => state.category);
 
-  //const { products, loading, error } = useSelector((state) => state.products);
   const {
     products,
     count,
     pageIndex,
     loading,
     error,
-    resultByPage,
     search,
     pageSize,
     precioMax,

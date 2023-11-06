@@ -29,7 +29,7 @@ const Register = () => {
   const alert = useAlert();
   const dispatch = useDispatch();
 
-  const { errores, isAuthenticated, loading }  = useSelector(state => state.security);
+  const { errores, isAuthenticated }  = useSelector(state => state.security);
 
     useEffect(() => {
         if(isAuthenticated)

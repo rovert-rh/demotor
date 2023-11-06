@@ -23,7 +23,7 @@ const Header = () => {
         <div className="col-12 col-md-3">
           <div className="navbar-brand">
             <Link to="/">
-              <img src="/images/logo_vaxi.png" />
+              <img src="/images/logo_vaxi.png" alt="Logo" />
             </Link>
           </div>
         </div>

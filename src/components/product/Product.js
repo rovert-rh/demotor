@@ -9,6 +9,7 @@ const Product = ({ product, col }) => {
       <div className="card p-3 rounded">
         <img
           className="card-img-top mx-auto"
+          alt="Card"
           src={product.images[0] ? product.images[0].url : default_image }
         />
         <div className="card-body d-flex flex-column">

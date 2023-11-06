@@ -25,10 +25,8 @@ const Shipping = () => {
     useEffect( () => {
         if(isUpdated)
         {
-            //navege hacia la siguiente pasarela de pago - order confirm
             navigate("/order/confirm");
             dispatch(resetUpdateStatus({}))
-            //alert.success("Se almaceno la direccion de envio");
         }
 
         if(errores)

@@ -17,13 +17,10 @@ const ConfirmOrder = () => {
     shoppingCartItems,
     shoppingCartId,
     total,
-    cantidad,
     subtotal,
     precioEnvio,
     impuesto,
   } = useSelector((state) => state.cart);
-
-  const items = shoppingCartItems.slice();
 
   const { isUpdated, errores } = useSelector((state) => state.order);
 
@@ -31,9 +28,7 @@ const ConfirmOrder = () => {
 
   useEffect(() => {
     if (isUpdated) {
-      //navegar hacia el siguiente step
       navigate('/payment')
-      //alert.success("Se creo la orden de compra");
       dispatch(resetUpdateStatus({}));
     }
 
