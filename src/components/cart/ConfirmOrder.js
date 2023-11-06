@@ -28,14 +28,17 @@ const ConfirmOrder = () => {
 
   useEffect(() => {
     if (isUpdated) {
-      navigate('/payment')
+      navigate('/payment');
       dispatch(resetUpdateStatus({}));
     }
-
-    if (errores) {
-      errores.map((error) => alert.error(error));
+  
+    if (errores && errores.length > 0) {
+      for (const error of errores) {
+        alert.error(error);
+      }
     }
   }, [dispatch, isUpdated, errores]);
+  
 
   const handlerSubmit = () => {
     const request = {

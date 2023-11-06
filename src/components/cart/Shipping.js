@@ -22,19 +22,17 @@ const Shipping = () => {
     const [codigoPostal, setCodigoPostal] = useState( direccionEnvio ? direccionEnvio.codigoPostal : "" );
     const [pais, setPais] = useState( direccionEnvio ? direccionEnvio.pais : "US" );
 
-    useEffect( () => {
-        if(isUpdated)
-        {
-            navigate("/order/confirm");
-            dispatch(resetUpdateStatus({}))
+    useEffect(() => {
+      if (isUpdated) {
+        navigate('/order/confirm');
+        dispatch(resetUpdateStatus({}));
+      }
+    
+      if (errores) {
+        for (let i = 0; i < errores.length; i++) {
+          alert.error(errores[i]);
         }
-
-        if(errores)
-        {
-            errores.map(error => alert.error(error));
-        }
-
-
+      }
     }, [dispatch, errores, alert, isUpdated]);
 
     const submitHandler = (e) => {
